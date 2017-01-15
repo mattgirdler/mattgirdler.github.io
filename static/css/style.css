@@ -17,6 +17,12 @@ a:hover {
   color: #16A085;
 }
 
+/* Lists */
+ul {
+    padding-left: 20px;
+}
+
+
 /* Title */
 .title,
 .title:focus,
@@ -131,6 +137,10 @@ body {
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
+}
+
+.lead {
+    margin-top: 30px;
 }
 
 /*
