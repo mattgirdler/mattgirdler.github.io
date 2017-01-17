@@ -10,10 +10,10 @@
     <link href="static/css/style.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="static/images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="static/images/favicon-16x16.png" sizes="16x16" />
-
+    
   </head>
   <body>
-
+    
 <div class="cover-wrapper">
   <div class="cover-wrapper-inner">
     <div class="cover-container">
@@ -123,30 +123,32 @@
               <button class="btn btn-default btn-sm" type="button" data-toggle="collapse" data-target="#mapCollapse" aria-expanded="false" aria-controls="collapseExample">
                 Details&nbsp;<span class="caret"></span>
               </button>
-          <div class="collapse" id="mapCollapse">
-            <p class="preamble">The effect was achieved with the following code:</p>
-            <pre>
+          </li>
+        </ul>
+        <div class="collapse" id="mapCollapse">
+          <p class="preamble">The effect was achieved with the following code:</p>
+          <pre>
 ### HTML ###
 
 &lt;div class=&quot;results&quot;&gt;
-  &lt;div class=&quot;results-scroller&quot;&gt;
-    ...
-  &lt;/div&gt;
+&lt;div class=&quot;results-scroller&quot;&gt;
+  ...
+&lt;/div&gt;
 &lt;/div&gt;
 
 ### CSS ###
 
 .results {
-  float: right;
-  width: 40%;
-  padding-left: 20px;
-  height: 30em;
+float: right;
+width: 40%;
+padding-left: 20px;
+height: 30em;
 }
 
 .results-scroller {
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+height: 100%;
+overflow-y: scroll;
+overflow-x: hidden;
 }
 
 ### JavaScript ###
@@ -156,16 +158,14 @@
 # the map and applies the highlighted styling.
 
 function highlightCharge(index) {
-    highlightVectorSource.clear();
-    if (document.getElementById("display_toggle_" + index).checked == true) {
-        highlightVectorSource.addFeature(resultVectorSource.getFeatures()[index -1]);
-        highlightVectorSource.getFeatures()[0].setStyle(highlighted);
-    }
+  highlightVectorSource.clear();
+  if (document.getElementById("display_toggle_" + index).checked == true) {
+      highlightVectorSource.addFeature(resultVectorSource.getFeatures()[index -1]);
+      highlightVectorSource.getFeatures()[0].setStyle(highlighted);
+  }
 }
-             </pre>
-          </div>
-          </li>
-        </ul>
+           </pre>
+        </div>
       </div>
       <div class="subsection-entry">
         <h4>Find Property Information (September 2015 - March 2016)</h4>
@@ -249,7 +249,7 @@ function highlightCharge(index) {
       </div>
       <div class="subsection-entry">
         <p class="preamble">The following statements are quotes from senior members of staff, based on my perfomance in various projects:</p>
-        <p class="quote">"Confident, knowledgeable."</p>
+        <p class="quote">"Confident, knowledgable."</p>
         <p class="quote">"Shows enthusiasm and great interest in what he is doing."</p>
         <p class="quote">"Good attention to detail, provided clear documentation."</p>
         <p class="quote">"Has the ability to work well within a team and to assimilate information very quickly in order to become effective."</p>
@@ -280,6 +280,6 @@ function highlightCharge(index) {
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="static/js/functions.js"></script>
-
+    
   </body>
 </html>
