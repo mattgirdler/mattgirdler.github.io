@@ -2,8 +2,6 @@
  *
  * Matthew Girdler
  *
- * Based on Bootstrap's Cover example: http://getbootstrap.com/examples/cover/
- *
  */
 
 /*
@@ -162,6 +160,10 @@ body {
   border-bottom: 1px solid #d6d6d6;
 }
 
+.about p {
+  text-align:center;
+}
+
 /*
  * Section
  */
@@ -190,9 +192,9 @@ body {
   line-height: 30px;
 }
 
-h1 {
+.subsection-title h1 {
   color:#888;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 
@@ -200,11 +202,15 @@ h1 {
  * Subsection entry
  */
 .subsection-entry {
-  margin-top:15px;
+  margin: 15px 0;
   padding:0;
 }
 .subsection-entry h4 {
+  margin: 20px 0;
   color: #16A085;
+}
+.subsection-entry p {
+  margin: 15px 0;
 }
 
 /*
@@ -240,7 +246,30 @@ h1 {
  * Footer
  */
 .footer {
-  margin: 20px 0px;
+ padding: 20px; 0;
+ border-top: 1px solid #d6d6d6;
+}
+.footer-wrapper {
+ color: #000;
+ text-align: center;
+
+ display: table;
+ width: 100%;
+ height: 100%; /* For at least Firefox */
+ min-height: 100%;
+ -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+         box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.footer-wrapper-inner {
+ background: #fff;
+ display: table-cell;
+ vertical-align: top;
+}
+.footer-container {
+ border-top: 1px solid #d6d6d6;
+ margin-right: auto;
+ margin-left: auto;
+ padding: 20px 0;
 }
 .footer-link {
   margin: 15px 0;
@@ -256,40 +285,16 @@ h1 {
 .footer-quote {
   margin: 15px 0;
 }
-.footer-quote p {
+
+.quote {
+  margin-left: 5px;
   font-style: italic;
 }
 
-/*
- * Subfooter
- */
-.subfooter-wrapper {
-  color: #000;
-  text-align: center;
-  /*padding: 0px 50px 40px;*/
-
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-}
-.subfooter-wrapper-inner {
-  background: #fff;
-  display: table-cell;
-  vertical-align: top;
-}
-.subfooter-container {
-  border-top: 1px solid #d6d6d6;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 20px 0;
-}
-
-.subfooter {
-  padding: 20px; 0;
-  border-top: 1px solid #d6d6d6;
+.preamble {
+  padding: 10px 0;
+  /*border-bottom: 1px solid #d6d6d6;*/
+  font-weight: bold;
 }
 
 /*
@@ -330,8 +335,15 @@ h1 {
   .subsection-entry {
     width:68%;
     float:right;
-    margin-top:15px;
+    margin:10px 0;
     padding:0;
+  }
+  .subsection-entry h4 {
+    margin: 10px 0;
+    color: #16A085;
+  }
+  .subsection-entry p {
+    margin: 10px 0;
   }
   .footer-link {
     width: 50%;
@@ -343,8 +355,12 @@ h1 {
   .masthead,
   .mastfoot,
   .cover-container,
-  .subfooter-container {
+  .footer-container {
     width: 700px;
+  }
+  .about p {
+    width:90%;
+    margin:auto;
   }
   .info,
   .footer {
