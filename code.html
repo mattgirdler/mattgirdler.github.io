@@ -118,7 +118,53 @@
         &lt;ul&gt;
           &lt;li&gt;&lt;p&gt;Heavily involved in creation of mapping tools using OpenLayers3 (JavaScript).&lt;/p&gt;&lt;/li&gt;
           &lt;li&gt;&lt;p&gt;Became the first 'T-shaped' developer, contributing to both development (using Python, JavaScript, HTML etc.) and testing (using Ruby/Cucumber).&lt;/p&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;p&gt;Using HTML, CSS and JavaScript, redesigned the map search results page, allowing the user to hover over a search result and have the relevant area highlighted on the map.&lt;p&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt; Using HTML, CSS and JavaScript, redesigned the map search results page, allowing the user to hover over a search result and have the relevant area highlighted on the map.&lt;p&gt;
+              &lt;button class=&quot;btn btn-default btn-sm&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#mapCollapse&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseExample&quot;&gt;
+                Details&amp;nbsp;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+              &lt;/button&gt;
+          &lt;div class=&quot;collapse&quot; id=&quot;mapCollapse&quot;&gt;
+            &lt;p class=&quot;preamble&quot;&gt;The effect was achieved with the following code:&lt;/p&gt;
+            &lt;pre&gt;
+### HTML ###
+
+&amp;lt;div class=&amp;quot;results&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;results-scroller&amp;quot;&amp;gt;
+    ...
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+### CSS ###
+
+.results {
+  float: right;
+  width: 40%;
+  padding-left: 20px;
+  height: 30em;
+}
+
+.results-scroller {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+### JavaScript ###
+
+# This function creates a copy of the relevant
+# search result geometry, draws it on top of
+# the map and applies the highlighted styling.
+
+function highlightCharge(index) {
+    highlightVectorSource.clear();
+    if (document.getElementById(&quot;display_toggle_&quot; + index).checked == true) {
+        highlightVectorSource.addFeature(resultVectorSource.getFeatures()[index -1]);
+        highlightVectorSource.getFeatures()[0].setStyle(highlighted);
+    }
+}
+             &lt;/pre&gt;
+          &lt;/div&gt;
+          &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/div&gt;
       &lt;div class=&quot;subsection-entry&quot;&gt;
