@@ -118,54 +118,7 @@
         <ul>
           <li><p>Heavily involved in creation of mapping tools using OpenLayers3 (JavaScript).</p></li>
           <li><p>Became the first 'T-shaped' developer, contributing to both development (using Python, JavaScript, HTML etc.) and testing (using Ruby/Cucumber).</p></li>
-          <li>
-            <p> Using HTML, CSS and JavaScript, redesigned the map search results page, allowing the user to hover over a search result and have the relevant area highlighted on the map.<p>
-              <button class="btn btn-default btn-sm" type="button" data-toggle="collapse" data-target="#mapCollapse" aria-expanded="false" aria-controls="collapseExample">
-                Details&nbsp;<span class="caret"></span>
-              </button>
-          </li>
         </ul>
-        <div class="collapse" id="mapCollapse">
-          <p class="preamble">The effect was achieved with the following code:</p>
-          <pre>
-### HTML ###
-
-&lt;div class=&quot;results&quot;&gt;
-  &lt;div class=&quot;results-scroller&quot;&gt;
-    ...
-  &lt;/div&gt;
-&lt;/div&gt;
-
-### CSS ###
-
-.results {
-  float: right;
-  width: 40%;
-  padding-left: 20px;
-  height: 30em;
-}
-
-.results-scroller {
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-### JavaScript ###
-
-# This function creates a copy of the relevant
-# search result geometry, draws it on top of
-# the map and applies the highlighted styling.
-
-function highlightCharge(index) {
-  highlightVectorSource.clear();
-  if (document.getElementById("display_toggle_" + index).checked == true) {
-      highlightVectorSource.addFeature(resultVectorSource.getFeatures()[index -1]);
-      highlightVectorSource.getFeatures()[0].setStyle(highlighted);
-  }
-}
-           </pre>
-        </div>
       </div>
       <div class="subsection-entry">
         <h4>Find Property Information (September 2015 - March 2016)</h4>
@@ -263,7 +216,7 @@ function highlightCharge(index) {
         <div class="footer-container">
           <div class="row footer-quote">
               <p>
-                This responsive, mobile-ready website was created using custom <a href="/code">HTML</a>, <a href="/static/css/style.css">CSS</a> and <a href="/static/js/functions.js">JavaScript</a>.
+                This responsive, mobile-ready website was created using custom HTML, CSS and JavaScript.
               </p>            
           </div>
         </div>
