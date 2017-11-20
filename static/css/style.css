@@ -67,6 +67,7 @@ body {
   background: #333 url("../images/plymouth-bw.jpg") no-repeat;
   display: table-cell;
   vertical-align: top;
+  background-size: cover; 
 }
 .cover-container {
   margin-right: auto;
