@@ -1,1 +1,7 @@
 .vscode
+
+# Node stuff
+index.js
+package-lock.json
+package.json
+node_modules
