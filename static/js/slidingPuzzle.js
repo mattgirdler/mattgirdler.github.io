@@ -12,9 +12,9 @@ function tryMove(tileNumber) {
         (emptyTileIndex-3 == currentTileIndex) ||
         (emptyTileIndex+3 == currentTileIndex)) {
         swapTiles(emptyTile, currentTile)
-    }
-    if (!checkFlag) {
-        checkBoard()
+        if (!checkFlag) {
+            checkBoard()
+        }
     }
 }
 
